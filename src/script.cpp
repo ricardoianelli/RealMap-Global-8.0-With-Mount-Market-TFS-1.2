@@ -21,7 +21,7 @@
 
 #include "script.h"
 #include "configmanager.h"
-#include <boost/filesystem.hpp>
+#include <filesystem>
 
 extern LuaEnvironment g_luaEnvironment;
 extern ConfigManager g_config;
@@ -39,7 +39,7 @@ Scripts::~Scripts()
 
 bool Scripts::loadScripts(std::string folderName, bool isLib, bool reload)
 {
-	namespace fs = boost::filesystem;
+	namespace fs = std::filesystem;
 
 	const auto dir = fs::current_path() / "data" / folderName;
 	if (!fs::exists(dir) || !fs::is_directory(dir)) {

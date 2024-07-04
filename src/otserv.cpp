@@ -124,6 +124,7 @@ void mainLoader(int argc, char* argv[], ServiceManager* services)
 	std::cout << "The " << STATUS_SERVER_NAME << " Global - Version: (" << STATUS_SERVER_VERSION << "." << MINOR_VERSION << " . " << REVISION_VERSION << ") - Codename: ( " << SOFTWARE_CODENAME << " )" << std::endl;
 	std::cout << "Compiled with: " << BOOST_COMPILER << std::endl;
 	std::cout << "Compiled on " << __DATE__ << ' ' << __TIME__ << " for platform ";
+	std::cout << "Modified by Ramza (Ricardo Ianelli)";
 
 #if defined(__amd64__) || defined(_M_X64)
 	std::cout << "x64" << std::endl;
